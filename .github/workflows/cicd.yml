@@ -12,6 +12,7 @@ jobs:
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       DOCKER_HUB_REGISTRY : ${{ secrets.DOCKER_REGISTRY }}
+      APPLICATION_YML : ${{ secrets.APPLICATION_YML }}
       IMAGE_TAG: ${{ github.sha }}
     steps:
       - name: Checkout GitHub Repository # 레포 코드 가져오기
@@ -22,6 +23,11 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
+
+      - name: create application.yml
+        run: |
+          mkdir -p src/main/resources
+          echo "${{ env.APPLICATION_YML }}" > src/main/resources/application.yml
 
       # gradlew
       - name: Make gradlew executable
