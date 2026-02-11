@@ -64,6 +64,7 @@ jobs:
       DOCKER_HUB_REGISTRY : ${{ secrets.DOCKER_REGISTRY }}
       IMAGE_TAG: ${{ github.sha }}
     steps:
+      #
       - name: Deploy to EC2
         uses: appleboy/ssh-action@master
         with:
