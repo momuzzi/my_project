@@ -76,5 +76,5 @@ jobs:
             echo "DOCKER_HUB_USERNAME=${{ env.DOCKER_HUB_USERNAME }}" >> /home/ubuntu/.env
             echo "DOCKER_HUB_PASSWORD=${{ env.DOCKER_HUB_PASSWORD }}" >> /home/ubuntu/.env
             echo "DOCKER_HUB_REGISTRY=${{ env.DOCKER_HUB_REGISTRY }}" >> /home/ubuntu/.env
-            cd /home/ubuntu/project/script
+            cd /home/ubuntu/script
             ./deploy.sh
