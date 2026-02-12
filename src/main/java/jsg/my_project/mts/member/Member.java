@@ -1,9 +1,10 @@
-package jsg.my_project.test;
+package jsg.my_project.mts.member;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jsg.my_project.global.util.BaseTime;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,9 +16,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Getter
-public class Member {
+public class Member extends BaseTime {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 }
