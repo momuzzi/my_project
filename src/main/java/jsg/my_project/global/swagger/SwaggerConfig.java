@@ -1,4 +1,4 @@
-package jsg.my_project.swagger;
+package jsg.my_project.global.swagger;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;

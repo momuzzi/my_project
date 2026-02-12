@@ -1,4 +1,4 @@
-package jsg.my_project.rdb;
+package jsg.my_project.global.rdb;
 
 import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;

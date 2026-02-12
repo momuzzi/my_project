@@ -1,4 +1,4 @@
-package jsg.my_project.rdb;
+package jsg.my_project.global.rdb;
 
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
