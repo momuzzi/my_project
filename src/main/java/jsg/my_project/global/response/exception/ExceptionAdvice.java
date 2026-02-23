@@ -67,6 +67,8 @@ public class ExceptionAdvice extends ResponseEntityExceptionHandler {
     @ExceptionHandler
     public ResponseEntity<Object> exception(Exception e, WebRequest request) {
 
+        log.error("{}", e.getStackTrace());
+
         String errorMessage = e.getMessage();
         String errorPoint = Objects.isNull(e.getStackTrace()) ? "No Stack Trace Error."
             : e.getStackTrace()[0].toString();
